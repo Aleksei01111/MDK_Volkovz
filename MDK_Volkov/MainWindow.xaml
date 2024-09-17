@@ -16,8 +16,8 @@
         <!--Нулевая строка начало-->
         
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-            <TextBlock Margin="0 0 5 0" FontSize="25" FontWeight="UltraBlack" Foreground="Blue">Добро пожаловать в РТК!</TextBlock>
-            <TextBlock Margin="5 0 0 0" FontStyle="Italic" FontFamily="Mono" Foreground="Red">Welcome to RTK!</TextBlock>
+            <TextBlock Margin="0 0 5 0" FontSize="25" FontWeight="UltraBlack" Foreground="#FF373186">Добро пожаловать в РТК!</TextBlock>
+            <!--<TextBlock Margin="5 0 0 0" FontStyle="Italic" FontFamily="Mono" Foreground="Red">Welcome to RTK!</TextBlock>-->
         </StackPanel>
         
         <!--Нулевая строка конец-->
@@ -30,36 +30,38 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Image x:Name="img" Source="/Images/RTK.png"/>
-            
-            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
-                <Image Source="/Images/iconLogin.png" Height="30" Width="30"/>
-                <TextBlock Foreground="White" FontWeight="Bold" FontFamily="Helvetica" FontSize="30" Height="30">Вход</TextBlock>
-            </StackPanel>
+            <Grid Grid.Column="0">
+                <Image x:Name="img" Source="/Images/RTK.png"/>
+            </Grid>
 
-            <StackPanel Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center">
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 0 5">
-                    <TextBlock Foreground="White" FontWeight="Medium" FontSize="18" Height="18"
-                               FontFamily="Helvetica" Margin="0 0 3 0">Введите имя и фамилию:</TextBlock>
-                    <TextBox Height="25" Width="250" Background="Transparent" Foreground="White"
-                             FontSize="18" FontFamily="Helvetica" BorderBrush="White" BorderThickness="2" Margin="3 0 0 0"
-                             x:Name="LoginTxb"/>
-                </StackPanel>
-
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 5 0 0">
-                    <TextBlock Foreground="White" FontWeight="Medium" FontSize="18" Height="18"
-                               FontFamily="Helvetica" Margin="0 0 3 0">Введите пароль:</TextBlock>
-                    <PasswordBox Height="25" Width="250" Background="Transparent" Foreground="White"
+            <Grid Grid.Column="1" Margin="10">
+                <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White"
+                           FontWeight="Bold" FontFamily="Helvetica" FontSize="30" Height="30">Вход</TextBlock>
+                
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 5" HorizontalAlignment="Right">
+                        <TextBlock Foreground="White" FontWeight="Medium" FontSize="18" Height="18" 
+                                   FontFamily="Helvetica" Margin="0 0 3 0">Введите имя и фамилию:</TextBlock>
+                        <TextBox Height="25" Width="250" Background="Transparent" Foreground="White"
                                  FontSize="18" FontFamily="Helvetica" BorderBrush="White" BorderThickness="2" Margin="3 0 0 0"
-                                 x:Name="PasswordPsb"/>
-                </StackPanel>
-            </StackPanel>
+                                 x:Name="LoginTxb"/>
+                    </StackPanel>
 
-            <StackPanel Grid.Column="1" VerticalAlignment="Bottom" Orientation="Horizontal" Margin="0 0 0 20">
-                <Button Content="Войти" Height="25" Width="180" Margin="0 0 10 0" BorderBrush="Lime" x:Name="LoginBtn" Click="Login_Click"/>
-                <Button Content="Зарегистрироваться" Height="25" Width="180" BorderThickness="2"
-                        BorderBrush="White" Background="Transparent" Foreground="White" x:Name="RegisterBtn" Click="Register_Click"/>
-            </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0 5 0 0" HorizontalAlignment="Right">
+                        <TextBlock Foreground="White" FontWeight="Medium" FontSize="18" Height="18" 
+                                   FontFamily="Helvetica" Margin="0 0 3 0">Введите пароль:</TextBlock>
+                        <PasswordBox Height="25" Width="250" Background="Transparent" Foreground="White"
+                                     FontSize="18" FontFamily="Helvetica" BorderBrush="White" BorderThickness="2" Margin="3 0 0 0"
+                                     x:Name="PasswordPsb"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="Войти" Height="25" Width="180" Margin="0 0 10 0" BorderBrush="Lime" x:Name="LoginBtn" Click="Login_Click"/>
+                    <Button Content="Зарегистрироваться" Height="25" Width="180" BorderThickness="2"
+            BorderBrush="White" Background="Transparent" Foreground="White" x:Name="RegisterBtn" Click="Register_Click"/>
+                </StackPanel>
+            </Grid>
         </Grid>
         
         <!--Первая строка конец-->
