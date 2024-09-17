@@ -16,15 +16,14 @@
         <!--Нулевая строка начало-->
         
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-            <TextBlock Margin="0 0 5 0" FontSize="25" FontWeight="UltraBlack" Foreground="#FF373186">Добро пожаловать в РТК!</TextBlock>
-            <!--<TextBlock Margin="5 0 0 0" FontStyle="Italic" FontFamily="Mono" Foreground="Red">Welcome to RTK!</TextBlock>-->
+            <TextBlock Margin="0 0 5 0" Style="{StaticResource Head1}" Foreground="{StaticResource PrimaryColor}">Добро пожаловать в РТК!</TextBlock>
         </StackPanel>
         
         <!--Нулевая строка конец-->
 
         <!--Первая строка начало-->
 
-        <Grid Grid.Row="1" Background="#FF373186">
+        <Grid Grid.Row="1" Background="{StaticResource PrimaryColor}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*"/>
                 <ColumnDefinition/>
@@ -35,31 +34,23 @@
             </Grid>
 
             <Grid Grid.Column="1" Margin="10">
-                <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White"
-                           FontWeight="Bold" FontFamily="Helvetica" FontSize="30" Height="30">Вход</TextBlock>
+                <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" Style="{StaticResource Head2}">Вход</TextBlock>
                 
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal" Margin="0 0 0 5" HorizontalAlignment="Right">
-                        <TextBlock Foreground="White" FontWeight="Medium" FontSize="18" Height="18" 
-                                   FontFamily="Helvetica" Margin="0 0 3 0">Введите имя и фамилию:</TextBlock>
-                        <TextBox Height="25" Width="250" Background="Transparent" Foreground="White"
-                                 FontSize="18" FontFamily="Helvetica" BorderBrush="White" BorderThickness="2" Margin="3 0 0 0"
-                                 x:Name="LoginTxb"/>
+                        <TextBlock Foreground="White" Style="{StaticResource Text}" Margin="0 0 3 0">Введите имя и фамилию:</TextBlock>
+                        <TextBox Style="{StaticResource TextBox}" Margin="3 0 0 0" x:Name="LoginTxb"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Margin="0 5 0 0" HorizontalAlignment="Right">
-                        <TextBlock Foreground="White" FontWeight="Medium" FontSize="18" Height="18" 
-                                   FontFamily="Helvetica" Margin="0 0 3 0">Введите пароль:</TextBlock>
-                        <PasswordBox Height="25" Width="250" Background="Transparent" Foreground="White"
-                                     FontSize="18" FontFamily="Helvetica" BorderBrush="White" BorderThickness="2" Margin="3 0 0 0"
-                                     x:Name="PasswordPsb"/>
+                        <TextBlock Foreground="White" Style="{StaticResource Text}" Margin="0 0 3 0">Введите пароль:</TextBlock>
+                        <PasswordBox Style="{StaticResource TextBox}" Margin="3 0 0 0" x:Name="PasswordPsb"/>
                     </StackPanel>
                 </StackPanel>
 
                 <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button Content="Войти" Height="25" Width="180" Margin="0 0 10 0" BorderBrush="Lime" x:Name="LoginBtn" Click="Login_Click"/>
-                    <Button Content="Зарегистрироваться" Height="25" Width="180" BorderThickness="2"
-            BorderBrush="White" Background="Transparent" Foreground="White" x:Name="RegisterBtn" Click="Register_Click"/>
+                    <Button Content="Войти" Style="{StaticResource MainButton}" Margin="0 0 10 0" x:Name="LoginBtn" Click="Login_Click"/>
+                    <Button Content="Зарегистрироваться" Style="{StaticResource Button}" x:Name="RegisterBtn" Click="Register_Click"/>
                 </StackPanel>
             </Grid>
         </Grid>
@@ -69,13 +60,13 @@
         <!--Вторая строка начало-->
 
         <DockPanel Grid.Row="2">
-            <TextBlock DockPanel.Dock="Left" Width="260" TextWrapping="Wrap" FontSize="10" Foreground="#FF8B8B8B">
+            <TextBlock DockPanel.Dock="Left" Width="260" TextWrapping="Wrap" Style="{StaticResource SmallText}">
                 ©2012-2022, РТК. Все права защищены. Полное или частичное копирование материалов запрещено.
             </TextBlock>
-            <TextBlock DockPanel.Dock="Left" Width="200" TextWrapping="Wrap" FontSize="10" Foreground="#FF8B8B8B">
+            <TextBlock DockPanel.Dock="Left" Width="200" TextWrapping="Wrap" Style="{StaticResource SmallText}">
                 390035, г. Рязань, пр-д Гоголя, 6 Телефон: 8(4912)98-13-13 Электронная почта: tehno.coll.rzn@ryazangov.ru
             </TextBlock>
-            <TextBlock DockPanel.Dock="Right" Width="140" TextWrapping="Wrap" FontSize="10" Foreground="#FF8B8B8B">
+            <TextBlock DockPanel.Dock="Right" Width="140" TextWrapping="Wrap" Style="{StaticResource SmallText}">
                 ПРИЕМНАЯ КОМИССИЯ 8(4912)98-21-11
             </TextBlock>
         </DockPanel>

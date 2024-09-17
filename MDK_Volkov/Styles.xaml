@@ -1,0 +1,61 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <FontFamily x:Key="GlobalFontFamily">helvetica</FontFamily>
+    <SolidColorBrush x:Key="PrimaryColor" Color="#FF373186"/>
+    <SolidColorBrush x:Key="SeconderyColor" Color="#7AB02E"/>
+
+    <Style x:Key="Head1">
+        <Setter Property="TextBlock.FontFamily" Value="{StaticResource GlobalFontFamily}"/>
+        <Setter Property="TextBlock.FontSize" Value="25"/>
+        <Setter Property="TextBlock.FontWeight" Value="UltraBlack"/>
+    </Style>
+
+    <Style x:Key="Head2">
+        <Setter Property="TextBlock.FontFamily" Value="{StaticResource GlobalFontFamily}"/>
+        <Setter Property="TextBlock.FontSize" Value="20"/>
+        <Setter Property="TextBlock.FontWeight" Value="Bold"/>
+    </Style>
+
+    <Style x:Key="Text">
+        <Setter Property="TextBlock.FontFamily" Value="{StaticResource GlobalFontFamily}"/>
+        <Setter Property="TextBlock.FontSize" Value="16"/>
+        <Setter Property="Control.Foreground" Value="White"/>
+        <Setter Property="TextBlock.FontWeight" Value="Regular"/>
+    </Style>
+
+    <Style x:Key="SmallText">
+        <Setter Property="TextBlock.FontFamily" Value="{StaticResource GlobalFontFamily}"/>
+        <Setter Property="TextBlock.FontSize" Value="10"/>
+        <Setter Property="Control.Foreground" Value="#FF8B8B8B"/>
+        <Setter Property="TextBlock.FontWeight" Value="Regular"/>
+    </Style>
+
+    <Style x:Key="TextBox">
+        <Setter Property="Control.Height" Value="25"/>
+        <Setter Property="Control.Width" Value="250"/>
+        <Setter Property="TextBlock.FontFamily" Value="{StaticResource GlobalFontFamily}"/>
+        <Setter Property="TextBlock.FontSize" Value="16"/>
+        <Setter Property="TextBlock.FontWeight" Value="Regular"/>
+        <Setter Property="Control.Background" Value="Transparent"/>
+        <Setter Property="Control.BorderBrush" Value="White"/>
+        <Setter Property="Control.BorderThickness" Value="2"/>
+        <Setter Property="Control.Foreground" Value="White"/>
+    </Style>
+
+    <Style x:Key="MainButton">
+        <Setter Property="Control.Height" Value="25"/>
+        <Setter Property="Control.Width" Value="180"/>
+        <Setter Property="Control.Background" Value="White"/>
+        <Setter Property="Control.BorderThickness" Value="2"/>
+        <Setter Property="Control.BorderBrush" Value="{StaticResource SeconderyColor}"/>
+    </Style>
+
+    <Style x:Key="Button">
+        <Setter Property="Control.Height" Value="25"/>
+        <Setter Property="Control.Width" Value="180"/>
+        <Setter Property="Control.Background" Value="Transparent"/>
+        <Setter Property="Control.BorderBrush" Value="White"/>
+        <Setter Property="Control.BorderThickness" Value="2"/>
+        <Setter Property="Control.Foreground" Value="White"/>
+    </Style>
+</ResourceDictionary>
