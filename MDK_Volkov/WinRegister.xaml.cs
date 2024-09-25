@@ -23,5 +23,18 @@ namespace MDK_Volkov
         {
             InitializeComponent();
         }
+
+        private void RegisterBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if(PasswordPsb.Password != ReTryPasswordPsb.Password)
+            {
+                MessageBox.Show("Пароли не совпадают", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            var s = new Student(NameTxb.Text, PasswordPsb.Password);
+            MessageBox.Show("Запись создана успешно!", "Ура", MessageBoxButton.OK, MessageBoxImage.Information);
+            DialogResult = true;
+        }
     }
 }

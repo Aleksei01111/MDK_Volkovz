@@ -22,8 +22,7 @@ namespace MDK_Volkov
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            new WinRegister().Show();
-            Close();
+            new WinRegister().ShowDialog();
         }
     }
 }

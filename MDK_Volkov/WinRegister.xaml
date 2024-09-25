@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MDK_Volkov"
         mc:Ignorable="d"
-        Title="WinRegister" Height="450" Width="800">
-    <Grid>
-        <TextBlock>Регистрация запрещена</TextBlock>
-    </Grid>
+        Title="WinRegister" Height="500" Width="300">
+    <StackPanel Margin="20">
+        <TextBlock Style="{StaticResource Head2}" HorizontalAlignment="Center">Регистрация</TextBlock>
+
+        <TextBlock Style="{StaticResource Text}" Foreground="Black">Введите имя</TextBlock>
+        <TextBox Style="{StaticResource Text}" Foreground="Black" x:Name="NameTxb"/>
+        
+        <TextBlock>Введите пароль</TextBlock>
+        <PasswordBox Style="{StaticResource Text}" Foreground="Black" x:Name="PasswordPsb"/>
+        
+        <TextBlock>Повторите пароль</TextBlock>
+        <PasswordBox Style="{StaticResource Text}" Foreground="Black" x:Name="ReTryPasswordPsb"/>
+
+        <Button Click="RegisterBtn_Click" Style="{StaticResource Button}" Background="Gray" HorizontalAlignment="Left" Margin='0, 10, 0, 0'>Ок</Button>
+    </StackPanel>
 </Window>
