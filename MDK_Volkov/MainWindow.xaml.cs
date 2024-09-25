@@ -7,6 +7,7 @@ namespace MDK_Volkov
     /// </summary>
     public partial class MainWindow : Window
     {
+        Student student;
         public MainWindow()
         {
             InitializeComponent();
@@ -14,7 +15,7 @@ namespace MDK_Volkov
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            if (LoginTxb.Text == "admin" && PasswordPsb.Password == "admin")
+            if (LoginTxb.Text == student?.Name && PasswordPsb.Password == student?.Password)
                 MessageBox.Show("Введены верные данные", "Пока", MessageBoxButton.OK, MessageBoxImage.Information);
             else
                 MessageBox.Show("Введены неверные данные", "ОШИБКА!!!", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -22,9 +23,9 @@ namespace MDK_Volkov
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            Student stud = new Student("", "");
-            if(new WinRegister(stud).ShowDialog().Value == true)
-                MessageBox.Show($"Запись успешно создана (\"{stud.Name}\")", "УРАА", MessageBoxButton.OK, MessageBoxImage.Information);
+            student = new Student("", "");
+            if(new WinRegister(student).ShowDialog().Value == true)
+                MessageBox.Show($"Запись успешно создана (\"{student.Name}\")", "УРАА", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }
