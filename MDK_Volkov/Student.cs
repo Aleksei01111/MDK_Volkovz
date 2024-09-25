@@ -13,7 +13,6 @@ namespace MDK_Volkov
 
         public Student(string name, string password)
         {
-            if (name == "" || password == "") throw new ArgumentException("Значения name и password не могут быть пустыми!");
             Name = name;
             Password = password;
         }

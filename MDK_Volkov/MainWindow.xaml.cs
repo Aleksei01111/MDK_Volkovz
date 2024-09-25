@@ -22,7 +22,9 @@ namespace MDK_Volkov
 
         private void Register_Click(object sender, RoutedEventArgs e)
         {
-            new WinRegister().ShowDialog();
+            Student stud = new Student("", "");
+            if(new WinRegister(stud).ShowDialog().Value == true)
+                MessageBox.Show($"Запись успешно создана (\"{stud.Name}\")", "УРАА", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

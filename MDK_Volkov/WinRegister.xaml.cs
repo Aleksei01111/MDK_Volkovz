@@ -19,8 +19,10 @@ namespace MDK_Volkov
     /// </summary>
     public partial class WinRegister : Window
     {
-        public WinRegister()
+        Student StudentResult;
+        public WinRegister(Student studentResult)
         {
+            StudentResult = studentResult;
             InitializeComponent();
         }
 
@@ -32,8 +34,8 @@ namespace MDK_Volkov
                 return;
             }
 
-            var s = new Student(NameTxb.Text, PasswordPsb.Password);
-            MessageBox.Show("Запись создана успешно!", "Ура", MessageBoxButton.OK, MessageBoxImage.Information);
+            StudentResult.Name = NameTxb.Text;
+            StudentResult.Password = PasswordPsb.Password;
             DialogResult = true;
         }
     }
