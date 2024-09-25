@@ -59,7 +59,7 @@
         
         <!--Вторая строка начало-->
 
-        <DockPanel Grid.Row="2">
+        <DockPanel Grid.Row="2" Margin="0, 8, 0, 0">
             <TextBlock DockPanel.Dock="Left" Width="260" TextWrapping="Wrap" Style="{StaticResource SmallText}">
                 ©2012-2022, РТК. Все права защищены. Полное или частичное копирование материалов запрещено.
             </TextBlock>
