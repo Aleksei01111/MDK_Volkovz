@@ -6,7 +6,11 @@
         xmlns:local="clr-namespace:MDK_Volkov.Practice_3"
         mc:Ignorable="d"
         Title="WinAuthorization" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel>
+        <Image Source="/Images/varenie.png" Width="250"/>
+        <TextBlock>MDK ID</TextBlock>
+        <TextBlock>Сборник практических работ по МДК01.01</TextBlock>
+        <TextBox/>
+        <TextBox/>
+    </StackPanel>
 </Window>
