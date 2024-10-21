@@ -44,7 +44,7 @@
 
                     <StackPanel Orientation="Horizontal" Margin="0 5 0 0" HorizontalAlignment="Right">
                         <TextBlock Foreground="White" Style="{StaticResource Text}" Margin="0 0 3 0">Введите пароль:</TextBlock>
-                        <PasswordBox Style="{StaticResource TextBox}" Margin="3 0 0 0" x:Name="PasswordPsb"/>
+                        <PasswordBox Style="{StaticResource PasswordBox}" Margin="3 0 0 0" x:Name="PasswordPsb"/>
                     </StackPanel>
                 </StackPanel>
 
