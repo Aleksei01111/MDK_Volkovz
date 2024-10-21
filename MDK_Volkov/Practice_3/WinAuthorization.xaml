@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="WinAuthorization" Height="450" Width="800">
     <StackPanel>
-        <Image Source="/Images/varenie.png" Width="250"/>
+        <Image Source="/Images/varenie.png" Width="300"/>
         <TextBlock>MDK ID</TextBlock>
         <TextBlock>Сборник практических работ по МДК01.01</TextBlock>
         <TextBox/>
