@@ -25,12 +25,12 @@
             
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 0 10">
                 <TextBlock Style="{StaticResource Text}" Foreground="{StaticResource BlackColor}">Введите имя и мою фамилию</TextBlock>
-                <TextBox Style="{StaticResource TextBox}" Foreground="{StaticResource BlackColor}" Margin="5 0 0 0"/>
+                <TextBox Style="{StaticResource TextBox}" Foreground="{StaticResource BlackColor}" x:Name="NameTxb" Margin="5 0 0 0"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 0 30">
                 <TextBlock Style="{StaticResource Text}" Foreground="{StaticResource BlackColor}">Введите пароль</TextBlock>
-                <PasswordBox Style="{StaticResource PasswordBox}" Foreground="{StaticResource BlackColor}" Margin="5 0 0 0"/>
+                <PasswordBox Style="{StaticResource PasswordBox}" Foreground="{StaticResource BlackColor}" x:Name="PasswordPsb" Margin="5 0 0 0"/>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">

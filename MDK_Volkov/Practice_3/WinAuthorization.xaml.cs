@@ -24,7 +24,11 @@ namespace MDK_Volkov.Practice_3
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (NameTxb.Text == _student.Name && PasswordPsb.Password == _student.Password &&
+                (NameTxb.Text != "" && PasswordPsb.Password != ""))
+                MessageBox.Show("Введены верные данные", "Пока", MessageBoxButton.OK, MessageBoxImage.Information);
+            else
+                MessageBox.Show("Введены неверные данные", "ОШИБКА!!!", MessageBoxButton.OK, MessageBoxImage.Error);
         }
 
         private void SignUoButton_Click(object sender, RoutedEventArgs e)
