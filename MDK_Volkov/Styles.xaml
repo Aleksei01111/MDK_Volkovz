@@ -2,7 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <FontFamily x:Key="GlobalFontFamily">helvetica</FontFamily>
     <SolidColorBrush x:Key="PrimaryColor" Color="#FF373186"/>
+    <SolidColorBrush x:Key="BlackColor" Color="#000161"/>
     <SolidColorBrush x:Key="SeconderyColor" Color="#7AB02E"/>
+    <CornerRadius x:Key="GlobalCornerRadius" TopLeft="6" TopRight="6" BottomRight="6" BottomLeft="6"/>
 
     <Style x:Key="Head1">
         <Setter Property="TextBlock.FontFamily" Value="{StaticResource GlobalFontFamily}"/>
@@ -43,7 +45,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <Border CornerRadius="10" BorderBrush="#000161" BorderThickness="0 0 0 3">
+                    <Border CornerRadius="{StaticResource GlobalCornerRadius}" BorderBrush="{StaticResource BlackColor}" BorderThickness="1">
                         <ScrollViewer x:Name="PART_ContentHost"/>
                     </Border>
                 </ControlTemplate>
@@ -64,7 +66,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <Border CornerRadius="10" BorderBrush="#000161" BorderThickness="0 0 0 3">
+                    <Border CornerRadius="{StaticResource GlobalCornerRadius}" BorderBrush="{StaticResource BlackColor}" BorderThickness="1">
                         <ScrollViewer x:Name="PART_ContentHost"/>
                     </Border>
                 </ControlTemplate>

@@ -12,6 +12,7 @@
     <None Remove="Images\iconLogin.png" />
     <None Remove="Images\RTK.png" />
     <None Remove="Images\student.png" />
+    <None Remove="Images\varenie.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +23,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\student.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\varenie.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

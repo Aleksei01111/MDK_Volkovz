@@ -5,12 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MDK_Volkov.Practice_3"
         mc:Ignorable="d"
-        Title="WinAuthorization" Height="450" Width="800">
-    <StackPanel>
-        <Image Source="/Images/varenie.png" Width="300"/>
-        <TextBlock>MDK ID</TextBlock>
-        <TextBlock>Сборник практических работ по МДК01.01</TextBlock>
-        <TextBox/>
-        <TextBox/>
-    </StackPanel>
+        Title="Авторизация" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" VerticalAlignment="Center">
+            <Image Source="/Images/varenie.png" Width="180" HorizontalAlignment="Center" Margin="0 0 0 80"/>
+            <TextBlock Style="{StaticResource Head1}" HorizontalAlignment="Center" Foreground="{StaticResource BlackColor}">MDK ID</TextBlock>
+            <TextBlock Style="{StaticResource Head2}" HorizontalAlignment="Center" TextWrapping="Wrap" Foreground="{StaticResource BlackColor}">Сборник практических работ по МДК01.01</TextBlock>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock Style="{StaticResource Head2}" Foreground="{StaticResource BlackColor}"
+                       HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 0 0 30">Вход</TextBlock>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 0 10">
+                <TextBlock Style="{StaticResource Text}" Foreground="{StaticResource BlackColor}">Введите свое имя и мою фамилию</TextBlock>
+                <TextBox Style="{StaticResource TextBox}" Foreground="{StaticResource BlackColor}" Margin="5 0 0 0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 0 30">
+                <TextBlock Style="{StaticResource Text}" Foreground="{StaticResource BlackColor}">Введите пароль</TextBlock>
+                <PasswordBox Style="{StaticResource PasswordBox}" Foreground="{StaticResource BlackColor}" Margin="5 0 0 0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Style="{StaticResource Button}" Foreground="{StaticResource BlackColor}">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Border CornerRadius="{StaticResource GlobalCornerRadius}" BorderBrush="{StaticResource BlackColor}" BorderThickness="1">
+                                <TextBlock Text="Войти" Foreground="{StaticResource BlackColor}"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Button Style="{StaticResource Button}" Foreground="{StaticResource BlackColor}" Margin="5 0 0 0">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Border CornerRadius="{StaticResource GlobalCornerRadius}" BorderBrush="{StaticResource BlackColor}" BorderThickness="1">
+                                <TextBlock Text="Зарегистрироваться" Foreground="{StaticResource BlackColor}"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
 </Window>
