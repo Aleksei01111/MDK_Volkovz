@@ -23,5 +23,15 @@ namespace MDK_Volkov.Practice_3
         {
             InitializeComponent();
         }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SignUoButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

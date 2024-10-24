@@ -82,12 +82,33 @@
         <Setter Property="Control.BorderBrush" Value="{StaticResource SeconderyColor}"/>
     </Style>
 
-    <Style x:Key="Button">
+    <Style x:Key="Button" TargetType="Button">
         <Setter Property="Control.Height" Value="25"/>
         <Setter Property="Control.Width" Value="180"/>
-        <Setter Property="Control.Background" Value="Transparent"/>
-        <Setter Property="Control.BorderBrush" Value="White"/>
-        <Setter Property="Control.BorderThickness" Value="2"/>
-        <Setter Property="Control.Foreground" Value="White"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="{StaticResource GlobalCornerRadius}" 
+                            BorderBrush="{StaticResource BlackColor}" BorderThickness="1" Background="White">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="{StaticResource GlobalCornerRadius}" BorderBrush="{StaticResource BlackColor}"
+                                    BorderThickness="0 0 0 3" Background="White">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 </ResourceDictionary>
