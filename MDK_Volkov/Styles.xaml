@@ -14,13 +14,13 @@
 
     <Style x:Key="Head2">
         <Setter Property="TextBlock.FontFamily" Value="{StaticResource GlobalFontFamily}"/>
-        <Setter Property="TextBlock.FontSize" Value="20"/>
+        <Setter Property="TextBlock.FontSize" Value="18"/>
         <Setter Property="TextBlock.FontWeight" Value="Bold"/>
     </Style>
 
     <Style x:Key="Text">
         <Setter Property="TextBlock.FontFamily" Value="{StaticResource GlobalFontFamily}"/>
-        <Setter Property="TextBlock.FontSize" Value="16"/>
+        <Setter Property="TextBlock.FontSize" Value="20"/>
         <Setter Property="Control.Foreground" Value="White"/>
         <Setter Property="TextBlock.FontWeight" Value="Regular"/>
     </Style>
@@ -52,7 +52,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+
     <Style x:Key="TextBox" TargetType="TextBox">
         <Setter Property="Control.Height" Value="25"/>
         <Setter Property="Control.Width" Value="250"/>
@@ -74,17 +74,10 @@
         </Setter>
     </Style>
 
-    <Style x:Key="MainButton">
-        <Setter Property="Control.Height" Value="25"/>
-        <Setter Property="Control.Width" Value="180"/>
-        <Setter Property="Control.Background" Value="White"/>
-        <Setter Property="Control.BorderThickness" Value="2"/>
-        <Setter Property="Control.BorderBrush" Value="{StaticResource SeconderyColor}"/>
-    </Style>
-
     <Style x:Key="Button" TargetType="Button">
-        <Setter Property="Control.Height" Value="25"/>
-        <Setter Property="Control.Width" Value="180"/>
+        <Setter Property="Control.Height" Value="30"/>
+        <Setter Property="Control.Width" Value="200"/>
+        <Setter Property="FontSize" Value="16"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -103,6 +96,36 @@
                         <ControlTemplate TargetType="Button">
                             <Border CornerRadius="{StaticResource GlobalCornerRadius}" BorderBrush="{StaticResource BlackColor}"
                                     BorderThickness="0 0 0 3" Background="White">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MainButton" TargetType="Button">
+        <Setter Property="Control.Height" Value="60"/>
+        <Setter Property="Control.Width" Value="300"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border CornerRadius="{StaticResource GlobalCornerRadius}" BorderThickness="1" Background="{StaticResource BlackColor}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="{StaticResource GlobalCornerRadius}" BorderBrush="{StaticResource BlackColor}"
+                                BorderThickness="0 0 0 1" Background="{StaticResource PrimaryColor}">
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
                         </ControlTemplate>

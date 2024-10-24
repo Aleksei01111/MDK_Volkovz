@@ -34,6 +34,12 @@ namespace MDK_Volkov
                 return;
             }
 
+            if(NameTxb.Text == "" || PasswordPsb.Password == "")
+            {
+                MessageBox.Show("Поля не нада пусто делат", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             StudentResult.Name = NameTxb.Text;
             StudentResult.Password = PasswordPsb.Password;
             DialogResult = true;

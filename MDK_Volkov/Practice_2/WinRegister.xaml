@@ -6,36 +6,36 @@
         xmlns:local="clr-namespace:MDK_Volkov"
         mc:Ignorable="d"
         Title="WinRegister" Height="590" Width="700" Background="#000161">
-    <Grid Margin="30">
+    <Grid Margin="15">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Rectangle Grid.RowSpan="2" Fill="White" RadiusX="40" RadiusY="40"/>
+        <Rectangle Grid.RowSpan="2" Fill="White" RadiusX="20" RadiusY="20"/>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
             <Image Source="/Images/student.png" Width="120" Height="125"/>
-            <TextBlock Foreground="#000161" Width="247" FontSize="25" FontWeight="Medium" TextWrapping="Wrap">РЯЗАНСКИЙ ТЕХНОЛОГИЧЕСКИЙ КОЛЛЕДЖ</TextBlock>
+            <TextBlock Style="{StaticResource Head2}" Width="250" FontSize="25" TextWrapping="Wrap" VerticalAlignment="Center">РЯЗАНСКИЙ ТЕХНОЛОГИЧЕСКИЙ КОЛЛЕДЖ</TextBlock>
         </StackPanel>
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">
-            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                <TextBlock FontSize="20" TextAlignment="Right" Width="230" Foreground="#000161">Введи имя и фамилию</TextBlock>
-                <TextBox x:Name="NameTxb" Style="{StaticResource TextBox}" Foreground="#000161"/>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10" HorizontalAlignment="Right">
+                <TextBlock Style="{StaticResource Text}" Foreground="{StaticResource BlackColor}" Margin="0 0 5 0">Введи имя и фамилию</TextBlock>
+                <TextBox x:Name="NameTxb" Style="{StaticResource TextBox}" Foreground="{StaticResource BlackColor}"/>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                <TextBlock FontSize="20" TextAlignment="Right" Width="230" Foreground="#000161">Введи парол</TextBlock>
-                <PasswordBox Style="{StaticResource PasswordBox}" Foreground="#000161" x:Name="PasswordPsb"/>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10" HorizontalAlignment="Right">
+                <TextBlock Style="{StaticResource Text}" Foreground="{StaticResource BlackColor}" Margin="0 0 5 0">Введи парол</TextBlock>
+                <PasswordBox Style="{StaticResource PasswordBox}" Foreground="{StaticResource BlackColor}" x:Name="PasswordPsb"/>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
-                <TextBlock FontSize="20" TextAlignment="Right" Width="230" Foreground="#000161">Введи парол повторить</TextBlock>
-                <PasswordBox Style="{StaticResource PasswordBox}" Foreground="#000161" x:Name="ReTryPasswordPsb"/>
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10" HorizontalAlignment="Right">
+                <TextBlock Style="{StaticResource Text}" Foreground="{StaticResource BlackColor}" Margin="0 0 5 0">Введи парол повторить</TextBlock>
+                <PasswordBox Style="{StaticResource PasswordBox}" Foreground="{StaticResource BlackColor}" x:Name="ReTryPasswordPsb"/>
             </StackPanel>
 
-            <Button Background="#000161" Foreground="White" FontSize="20" Height="40" Width="400" Click="RegisterBtn_Click">Зарегестрироватьтьтьсясясясяс</Button>
+            <Button Style="{StaticResource MainButton}" FontSize="16" FontWeight="Medium" Click="RegisterBtn_Click">Зарегестрироватьтьтьсясясясяс</Button>
         </StackPanel>
     </Grid>
 </Window>

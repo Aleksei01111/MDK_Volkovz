@@ -14,11 +14,9 @@ using System.Windows.Shapes;
 
 namespace MDK_Volkov.Practice_3
 {
-    /// <summary>
-    /// Логика взаимодействия для WinAuthorization.xaml
-    /// </summary>
     public partial class WinAuthorization : Window
     {
+        private Student _student = new Student("", "");
         public WinAuthorization()
         {
             InitializeComponent();
@@ -31,7 +29,8 @@ namespace MDK_Volkov.Practice_3
 
         private void SignUoButton_Click(object sender, RoutedEventArgs e)
         {
-
+            new WinRegister(_student).ShowDialog();
+            MessageBox.Show($"{_student.Name}", "Создан аккаунт", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }
