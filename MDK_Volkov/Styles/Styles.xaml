@@ -97,7 +97,7 @@
                     <Setter.Value>
                         <ControlTemplate TargetType="Button">
                             <Border CornerRadius="{StaticResource GlobalCornerRadius}" BorderBrush="{StaticResource BlackColor}"
-                                    BorderThickness="0 0 0 3" Background="White">
+                                    BorderThickness="0 0 0 3" Background="{StaticResource WhiteColor}">
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                             </Border>
                         </ControlTemplate>
@@ -110,7 +110,7 @@
     <Style x:Key="MainButton" TargetType="Button">
         <Setter Property="Control.Height" Value="60"/>
         <Setter Property="Control.Width" Value="300"/>
-        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Foreground" Value="{StaticResource WhiteColor}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">

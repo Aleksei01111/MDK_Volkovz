@@ -12,13 +12,15 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Column="0" VerticalAlignment="Center">
-            <Image Source="/Images/varenie.png" Width="280" HorizontalAlignment="Center" Margin="0 0 0 100"/>
-            <TextBlock Style="{StaticResource Head1}" HorizontalAlignment="Center" Foreground="{StaticResource BlackColor}">MDK ID</TextBlock>
-            <TextBlock Style="{StaticResource Head2}" HorizontalAlignment="Center" TextWrapping="Wrap"
-                       Foreground="{StaticResource BlackColor}" TextAlignment="Center">Сборник практических работ по МДК01.01</TextBlock>
-        </StackPanel>
-
+        <Grid Background="{StaticResource WhiteColor}" Grid.Column="0">
+            <StackPanel VerticalAlignment="Center">
+                <Image Source="/Images/varenie.png" Width="280" HorizontalAlignment="Center" Margin="0 0 0 100"/>
+                <TextBlock Style="{StaticResource Head1}" HorizontalAlignment="Center" Foreground="{StaticResource BlackColor}">MDK ID</TextBlock>
+                <TextBlock Style="{StaticResource Head2}" HorizontalAlignment="Center" TextWrapping="Wrap"
+               Foreground="{StaticResource BlackColor}" TextAlignment="Center">Сборник практических работ по МДК01.01</TextBlock>
+            </StackPanel>
+        </Grid>
+        
         <StackPanel HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Center">
             <TextBlock Style="{StaticResource Head2}" Foreground="{StaticResource BlackColor}"
                        HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 0 0 30">ВХОД</TextBlock>
