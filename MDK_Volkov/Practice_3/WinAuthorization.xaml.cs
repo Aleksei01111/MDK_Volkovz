@@ -33,8 +33,8 @@ namespace MDK_Volkov.Practice_3
 
         private void SignUoButton_Click(object sender, RoutedEventArgs e)
         {
-            new WinRegister(_student).ShowDialog();
-            MessageBox.Show($"{_student.Name}", "Создан аккаунт", MessageBoxButton.OK, MessageBoxImage.Information);
+            if(new WinRegister(_student).ShowDialog() == true)
+                MessageBox.Show($"{_student.Name}", "Создан аккаунт", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }
