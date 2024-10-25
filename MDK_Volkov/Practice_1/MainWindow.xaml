@@ -16,14 +16,14 @@
         <!--Нулевая строка начало-->
         
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
-            <TextBlock Margin="0 0 5 0" Style="{StaticResource Head1}" Foreground="{StaticResource PrimaryColor}">Добро пожаловать в РТК!</TextBlock>
+            <TextBlock Margin="0 0 5 0" Style="{StaticResource Head1Lg}" Foreground="{StaticResource PrimaryColorLg}">Добро пожаловать в РТК!</TextBlock>
         </StackPanel>
         
         <!--Нулевая строка конец-->
 
         <!--Первая строка начало-->
 
-        <Grid Grid.Row="1" Background="{StaticResource PrimaryColor}">
+        <Grid Grid.Row="1" Background="{StaticResource PrimaryColorLg}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="0.5*"/>
                 <ColumnDefinition/>
@@ -34,23 +34,23 @@
             </Grid>
 
             <Grid Grid.Column="1" Margin="10">
-                <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" Style="{StaticResource Head2}">Вход</TextBlock>
+                <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" Style="{StaticResource Head2Lg}">Вход</TextBlock>
                 
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal" Margin="0 0 0 5" HorizontalAlignment="Right">
-                        <TextBlock Foreground="White" Style="{StaticResource Text}" Margin="0 0 3 0">Введите имя и фамилию:</TextBlock>
-                        <TextBox Style="{StaticResource TextBox}" Margin="3 0 0 0" x:Name="LoginTxb"/>
+                        <TextBlock Foreground="White" Style="{StaticResource TextLg}" Margin="0 0 3 0">Введите имя и фамилию:</TextBlock>
+                        <TextBox Style="{StaticResource TextBoxLg}" Margin="3 0 0 0" x:Name="LoginTxb"/>
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Margin="0 5 0 0" HorizontalAlignment="Right">
-                        <TextBlock Foreground="White" Style="{StaticResource Text}" Margin="0 0 3 0">Введите пароль:</TextBlock>
-                        <PasswordBox Style="{StaticResource PasswordBox}" Margin="3 0 0 0" x:Name="PasswordPsb"/>
+                        <TextBlock Foreground="White" Style="{StaticResource TextLg}" Margin="0 0 3 0">Введите пароль:</TextBlock>
+                        <PasswordBox Style="{StaticResource PasswordBoxLg}" Margin="3 0 0 0" x:Name="PasswordPsb"/>
                     </StackPanel>
                 </StackPanel>
 
                 <StackPanel VerticalAlignment="Bottom" Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button Content="Войти" Style="{StaticResource MainButton}" Margin="0 0 10 0" x:Name="LoginBtn" Click="Login_Click"/>
-                    <Button Content="Зарегистрироваться" Style="{StaticResource Button}" x:Name="RegisterBtn" Click="Register_Click"/>
+                    <Button Content="Войти" Style="{StaticResource MainButtonLg}" Margin="0 0 10 0" x:Name="LoginBtn" Click="Login_Click"/>
+                    <Button Content="Зарегистрироваться" Style="{StaticResource ButtonLg}" x:Name="RegisterBtn" Click="Register_Click"/>
                 </StackPanel>
             </Grid>
         </Grid>
