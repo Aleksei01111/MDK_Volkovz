@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="WinMenu" Height="650" Width="950">
     <Grid>
-        
+        <TabControl>
+            <TabItem Style="{StaticResource TabControlItem}" Header="Практическая 1"/>
+            <TabItem Style="{StaticResource TabControlItem}" Header="Практическая 2"/>
+            <TabItem Style="{StaticResource TabControlItem}" Header="Практическая 3"/>
+            <TabItem Style="{StaticResource TabControlItem}" Header="Практическая 4"/>
+            <TabItem Style="{StaticResource TabControlItem}" Header="Практическая 5"/>
+            <TabItem Style="{StaticResource TabControlItem}" Header="Практическая 6"/>
+        </TabControl>
     </Grid>
 </Window>
