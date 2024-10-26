@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <FontFamily x:Key="GlobalFontFamilyLg">helvetica</FontFamily>
     <SolidColorBrush x:Key="PrimaryColorLg" Color="#FF373186"/>
-    <SolidColorBrush x:Key="SeconderyColorLg" Color="#7AB02E"/>
+    <SolidColorBrush x:Key="SecondaryColorLg" Color="#7AB02E"/>
 
     <Style x:Key="Head1Lg">
         <Setter Property="TextBlock.FontFamily" Value="{StaticResource GlobalFontFamilyLg}"/>
@@ -59,7 +59,7 @@
         <Setter Property="Control.Width" Value="180"/>
         <Setter Property="Control.Background" Value="White"/>
         <Setter Property="Control.BorderThickness" Value="2"/>
-        <Setter Property="Control.BorderBrush" Value="{StaticResource SeconderyColorLg}"/>
+        <Setter Property="Control.BorderBrush" Value="{StaticResource SecondaryColorLg}"/>
     </Style>
 
     <Style x:Key="ButtonLg">

@@ -3,7 +3,7 @@
     <FontFamily x:Key="GlobalFontFamily">jetbrains mono</FontFamily>
     <SolidColorBrush x:Key="PrimaryColor" Color="#373186"/>
     <SolidColorBrush x:Key="BlackColor" Color="#252259"/>
-    <SolidColorBrush x:Key="SeconderyColor" Color="#5bc2a3"/>
+    <SolidColorBrush x:Key="SecondaryColor" Color="#5bc2a3"/>
     <SolidColorBrush x:Key="Color3" Color="#D897AC"/>
     <SolidColorBrush x:Key="WhiteColor" Color="#e9edec"/>
     <CornerRadius x:Key="GlobalCornerRadius" TopLeft="6" TopRight="6" BottomRight="6" BottomLeft="6"/>
