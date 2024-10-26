@@ -19,17 +19,11 @@ namespace MDK_Volkov
     /// </summary>
     public partial class WinRegister : Window
     {
-        Student StudentResult;
+        private readonly Student _studentResult;
         public WinRegister(Student studentResult)
         {
-            StudentResult = studentResult;
+            _studentResult = studentResult;
             InitializeComponent();
-        }
-
-        public void ShowAndCloseParent(Window parentWindow)
-        {
-            Show();
-            parentWindow.Close();
         }
 
         private void RegisterBtn_Click(object sender, RoutedEventArgs e)
@@ -46,8 +40,8 @@ namespace MDK_Volkov
                 return;
             }
 
-            StudentResult.Name = NameTxb.Text;
-            StudentResult.Password = PasswordPsb.Password;
+            _studentResult.Name = NameTxb.Text;
+            _studentResult.Password = PasswordPsb.Password;
             DialogResult = true;
         }
     }

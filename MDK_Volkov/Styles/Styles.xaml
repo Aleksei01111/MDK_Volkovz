@@ -84,28 +84,20 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border CornerRadius="{StaticResource GlobalCornerRadius}" 
+                    <Border CornerRadius="{StaticResource GlobalCornerRadius}" x:Name="Border" 
                             BorderBrush="{StaticResource BlackColor}" BorderThickness="1" Background="White">
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource WhiteColor}"/>
+                            <Setter TargetName="Border" Property="BorderThickness" Value="0 0 0 3"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-
-        <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="{StaticResource GlobalCornerRadius}" BorderBrush="{StaticResource BlackColor}"
-                                    BorderThickness="0 0 0 3" Background="{StaticResource WhiteColor}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Trigger>
-        </Style.Triggers>
     </Style>
 
     <Style x:Key="MainButton" TargetType="Button">
@@ -116,27 +108,20 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border CornerRadius="{StaticResource GlobalCornerRadius}" BorderThickness="1" Background="{StaticResource BlackColor}">
+                    <Border x:Name="Border" CornerRadius="{StaticResource GlobalCornerRadius}" BorderThickness="1" Background="{StaticResource BlackColor}">
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="BorderThickness" Value="0 0 0 5"/>
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource PrimaryColor}"/>
+                            <Setter TargetName="Border" Property="BorderBrush" Value="{StaticResource Color3}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-
-        <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="{StaticResource GlobalCornerRadius}" BorderBrush="{StaticResource Color3}"
-                                BorderThickness="0 0 0 5" Background="{StaticResource PrimaryColor}">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                            </Border>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Trigger>
-        </Style.Triggers>
     </Style>
 
     <Style TargetType="TabItem" x:Key="TabControlItem">

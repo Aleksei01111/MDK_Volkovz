@@ -34,9 +34,9 @@ namespace MDK_Volkov.Practice_3
             MessageBox.Show("АААА");
 
         private void Look2Practice_OnClick(object sender, RoutedEventArgs e) =>
-            new WinRegister(new Student("", "")).ShowAndCloseParent(this);
+            new WinRegister(new Student("", "")).ShowDialog();
 
         private void Look1Practice_OnClick(object sender, RoutedEventArgs e) => 
-            new MainWindow().ShowAndCloseParent(this);
+            new MainWindow().ShowDialog();
     }
 }
