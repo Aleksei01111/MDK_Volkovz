@@ -40,15 +40,6 @@
         <Setter Property="Control.BorderBrush" Value="White"/>
         <Setter Property="Control.BorderThickness" Value="2"/>
         <Setter Property="Control.Foreground" Value="White"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate>
-                    <Border CornerRadius="10" BorderBrush="#000161" BorderThickness="0 0 0 3">
-                        <ScrollViewer x:Name="PART_ContentHost"/>
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
     </Style>
 
     <Style x:Key="TextBoxLg" TargetType="TextBox">
@@ -61,15 +52,6 @@
         <Setter Property="Control.BorderBrush" Value="White"/>
         <Setter Property="Control.BorderThickness" Value="2"/>
         <Setter Property="Control.Foreground" Value="White"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate>
-                    <Border CornerRadius="10" BorderBrush="#000161" BorderThickness="0 0 0 3">
-                        <ScrollViewer x:Name="PART_ContentHost"/>
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
     </Style>
 
     <Style x:Key="MainButtonLg">
