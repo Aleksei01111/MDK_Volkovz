@@ -60,13 +60,13 @@
         <!--Вторая строка начало-->
 
         <DockPanel Grid.Row="2" Margin="0, 8, 0, 0">
-            <TextBlock DockPanel.Dock="Left" Width="260" TextWrapping="Wrap" Style="{StaticResource SmallText}">
+            <TextBlock DockPanel.Dock="Left" Width="260" TextWrapping="Wrap" Style="{StaticResource SmallTextLg}">
                 ©2012-2022, РТК. Все права защищены. Полное или частичное копирование материалов запрещено.
             </TextBlock>
-            <TextBlock DockPanel.Dock="Left" Width="200" TextWrapping="Wrap" Style="{StaticResource SmallText}">
+            <TextBlock DockPanel.Dock="Left" Width="200" TextWrapping="Wrap" Style="{StaticResource SmallTextLg}">
                 390035, г. Рязань, пр-д Гоголя, 6 Телефон: 8(4912)98-13-13 Электронная почта: tehno.coll.rzn@ryazangov.ru
             </TextBlock>
-            <TextBlock DockPanel.Dock="Right" Width="140" TextWrapping="Wrap" Style="{StaticResource SmallText}">
+            <TextBlock DockPanel.Dock="Right" Width="140" TextWrapping="Wrap" Style="{StaticResource SmallTextLg}">
                 ПРИЕМНАЯ КОМИССИЯ 8(4912)98-21-11
             </TextBlock>
         </DockPanel>
