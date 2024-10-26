@@ -13,6 +13,11 @@ namespace MDK_Volkov
             InitializeComponent();
         }
 
+        public void ShowAndCloseParent(Window parentWindow)
+        {
+            Show();
+            parentWindow.Close();
+        }
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             if (LoginTxb.Text == student?.Name && PasswordPsb.Password == student?.Password)

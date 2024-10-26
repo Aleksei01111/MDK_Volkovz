@@ -8,9 +8,25 @@
         Title="WinMenu" Height="650" Width="950">
     <Grid>
         <TabControl>
-            <TabItem Style="{StaticResource TabControlItem}" Header="Практическая 1"/>
-            <TabItem Style="{StaticResource TabControlItem}" Header="Практическая 2"/>
-            <TabItem Style="{StaticResource TabControlItem}" Header="Практическая 3"/>
+            <TabItem Style="{StaticResource TabControlItem}" Header="Практическая 1">
+                <StackPanel Margin="0 60 0 0">
+                    <TextBlock Style="{StaticResource Head2}" HorizontalAlignment="Center">Создание формы авторизации</TextBlock>
+                    <Button Style="{StaticResource MainButton}" Click="Look1Practice_OnClick">Посмотрет</Button>
+                </StackPanel>
+            </TabItem>
+            <TabItem Style="{StaticResource TabControlItem}" Header="Практическая 2">
+                <StackPanel Margin="0 60 0 0">
+                    <TextBlock Style="{StaticResource Head2}" HorizontalAlignment="Center">Создание формы регистрации</TextBlock>
+                    <Button Style="{StaticResource MainButton}" Click="Look2Practice_OnClick">Посмотрет</Button>
+                </StackPanel>
+            </TabItem>
+            <TabItem Style="{StaticResource TabControlItem}" Header="Практическая 3">
+                <StackPanel Margin="0 60 0 0">
+                    <TextBlock Style="{StaticResource Head2}" HorizontalAlignment="Center">Третья практическая</TextBlock>
+                    <TextBlock Style="{StaticResource Text}" HorizontalAlignment="Center">А что тут должно быть?</TextBlock>
+                    <Button Style="{StaticResource MainButton}" Click="Look3Practice_OnClick">Посмотрет</Button>
+                </StackPanel>
+            </TabItem>
             <TabItem Style="{StaticResource TabControlItem}" Header="Практическая 4"/>
             <TabItem Style="{StaticResource TabControlItem}" Header="Практическая 5"/>
             <TabItem Style="{StaticResource TabControlItem}" Header="Практическая 6"/>

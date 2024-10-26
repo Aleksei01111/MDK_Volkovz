@@ -26,6 +26,12 @@ namespace MDK_Volkov
             InitializeComponent();
         }
 
+        public void ShowAndCloseParent(Window parentWindow)
+        {
+            Show();
+            parentWindow.Close();
+        }
+
         private void RegisterBtn_Click(object sender, RoutedEventArgs e)
         {
             if(PasswordPsb.Password != ReTryPasswordPsb.Password)

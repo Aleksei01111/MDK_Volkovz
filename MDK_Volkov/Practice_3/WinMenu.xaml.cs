@@ -29,5 +29,14 @@ namespace MDK_Volkov.Practice_3
             parent.Close();
             InitializeComponent();
         }
+
+        private void Look3Practice_OnClick(object sender, RoutedEventArgs e) =>
+            MessageBox.Show("АААА");
+
+        private void Look2Practice_OnClick(object sender, RoutedEventArgs e) =>
+            new WinRegister(new Student("", "")).ShowAndCloseParent(this);
+
+        private void Look1Practice_OnClick(object sender, RoutedEventArgs e) => 
+            new MainWindow().ShowAndCloseParent(this);
     }
 }

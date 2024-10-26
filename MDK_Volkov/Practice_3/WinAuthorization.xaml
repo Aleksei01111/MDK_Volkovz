@@ -14,7 +14,7 @@
 
         <Grid Background="{StaticResource WhiteColor}" Grid.Column="0">
             <StackPanel VerticalAlignment="Center">
-                <Image Source="/Images/varenie.png" Width="280" HorizontalAlignment="Center" Margin="0 0 0 100"/>
+                <Image Source="/Images/varenie.png" Width="200" HorizontalAlignment="Center" Margin="0 0 0 150"/>
                 <TextBlock Style="{StaticResource Head1}" HorizontalAlignment="Center" Foreground="{StaticResource BlackColor}">MDK ID</TextBlock>
                 <TextBlock Style="{StaticResource Head2}" HorizontalAlignment="Center" TextWrapping="Wrap"
                Foreground="{StaticResource BlackColor}" TextAlignment="Center">Сборник практических работ по МДК01.01</TextBlock>
