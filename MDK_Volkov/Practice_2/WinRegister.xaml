@@ -5,14 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MDK_Volkov"
         mc:Ignorable="d"
-        Title="WinRegister" Height="590" Width="700" Background="#000161">
+        Title="WinRegister" Height="590" Width="700" Background="{StaticResource BlackColor}">
     <Grid Margin="15">
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Rectangle Grid.RowSpan="2" Fill="White" RadiusX="20" RadiusY="20"/>
+        <Rectangle Grid.RowSpan="2" Fill="{StaticResource WhiteColor}" RadiusX="20" RadiusY="20"/>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
             <Image Source="/Images/student.png" Width="120" Height="125"/>
