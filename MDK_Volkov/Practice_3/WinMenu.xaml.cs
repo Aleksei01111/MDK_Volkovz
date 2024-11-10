@@ -37,6 +37,6 @@ namespace MDK_Volkov.Practice_3
             new WinRegister(new Student("", "")).ShowDialog();
 
         private void Look1Practice_OnClick(object sender, RoutedEventArgs e) => 
-            new MainWindow().ShowDialog();
+            new WinMain().ShowDialog();
     }
 }
