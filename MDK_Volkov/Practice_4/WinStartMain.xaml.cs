@@ -7,5 +7,8 @@ public partial class WinStartMain : Window
     public WinStartMain()
     {
         InitializeComponent();
+
+        FrameApp.FieldFrameApp = MainFrame;
+        MainFrame.Navigate(new WinStartMain());
     }
 }

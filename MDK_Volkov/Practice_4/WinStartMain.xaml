@@ -13,5 +13,7 @@
         </Grid.RowDefinitions>
         
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35"></TextBlock>
+        
+        <Frame Grid.Row="1" Name="MainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
