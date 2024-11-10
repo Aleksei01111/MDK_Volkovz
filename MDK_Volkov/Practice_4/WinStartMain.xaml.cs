@@ -9,6 +9,6 @@ public partial class WinStartMain : Window
         InitializeComponent();
 
         FrameApp.FieldFrameApp = MainFrame;
-        MainFrame.Navigate(new WinStartMain());
+        MainFrame.Navigate(new PageStartMenu());
     }
 }

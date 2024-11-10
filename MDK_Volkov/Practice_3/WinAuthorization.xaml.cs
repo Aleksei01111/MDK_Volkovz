@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using MDK_Volkov.Practice_4;
 
 namespace MDK_Volkov.Practice_3
 {
@@ -25,8 +14,11 @@ namespace MDK_Volkov.Practice_3
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             if (NameTxb.Text == _student.Name && PasswordPsb.Password == _student.Password &&
-                (NameTxb.Text != "" && PasswordPsb.Password != ""))
-                new WinMenu(this).Show();
+                NameTxb.Text != "" && PasswordPsb.Password != "")
+            {
+                new WinStartMain().Show();
+                //new WinMenu(this).Show();
+            }
             else
                 MessageBox.Show("Введены неверные данные", "ОШИБКА!!!", MessageBoxButton.OK, MessageBoxImage.Error);
         }
