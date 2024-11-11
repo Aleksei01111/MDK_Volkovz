@@ -17,7 +17,6 @@ namespace MDK_Volkov.Practice_3
                 NameTxb.Text != "" && PasswordPsb.Password != "")
             {
                 new WinStartMain().Show();
-                //new WinMenu(this).Show();
             }
             else
                 MessageBox.Show("Введены неверные данные", "ОШИБКА!!!", MessageBoxButton.OK, MessageBoxImage.Error);

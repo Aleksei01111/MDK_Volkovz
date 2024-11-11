@@ -7,8 +7,12 @@ public partial class WinStartMain : Window
     public WinStartMain()
     {
         InitializeComponent();
-
-        FrameApp.FieldFrameApp = MainFrame;
+        
         MainFrame.Navigate(new PageStartMenu());
+    }
+
+    private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+    {
+        MainFrame.Visibility = Visibility.Visible;
     }
 }

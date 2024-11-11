@@ -8,12 +8,15 @@
         Title="WinStartMain" Height="750" Width="1000">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="0.2*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35"></TextBlock>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35"
+                   Text="{Binding ElementName=MainFrame, Path=Content.Title}"/>
         
-        <Frame Grid.Row="1" Name="MainFrame" NavigationUIVisibility="Hidden"/>
+        <Button Click="ButtonBase_OnClick"></Button>
+        
+        <Frame Grid.Row="1" Name="MainFrame" NavigationUIVisibility="Hidden" Visibility="Collapsed"/>
     </Grid>
 </Window>

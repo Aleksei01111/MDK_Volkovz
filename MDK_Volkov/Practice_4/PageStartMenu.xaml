@@ -5,8 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:MDK_Volkov.Practice_4"
       mc:Ignorable="d"
-      Title="PageStartMenu" Height="450" Width="800">
+      Title="PageStartMenu" Height="450" Width="1000">
     <Grid>
-        
+        <TextBlock FontSize="90" Background="{StaticResource Color3}">aaa</TextBlock>
     </Grid>
 </Page>
