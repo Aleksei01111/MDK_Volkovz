@@ -7,16 +7,18 @@
         mc:Ignorable="d"
         Title="WinStartMain" Height="750" Width="1000">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0.2*"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="Menu" Background="White" MouseLeave="CloseMenu_MouseLeave" Margin="-180 0 0 0" MouseEnter="OpenMenu_MouseEnter" Width="200" HorizontalAlignment="Left">
+            <StackPanel>
+                <TextBlock>Меню</TextBlock>
+                <Button Click="ButtonBase_OnClick">Домашняя страница</Button>
+            </StackPanel>
+        </Grid>
         
-        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="35"
-                   Text="{Binding ElementName=MainFrame, Path=Content.Title}"/>
-        
-        <Button Click="ButtonBase_OnClick"></Button>
-        
-        <Frame Grid.Row="1" Name="MainFrame" NavigationUIVisibility="Hidden" Visibility="Collapsed"/>
+        <Frame NavigationUIVisibility="Hidden" Grid.Column="1" x:Name="MainFrame"/>
     </Grid>
 </Window>
