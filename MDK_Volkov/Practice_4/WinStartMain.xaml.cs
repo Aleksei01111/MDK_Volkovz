@@ -30,8 +30,11 @@ public partial class WinStartMain
             EasingFunction = new CubicEase { EasingMode = EasingMode.EaseInOut }
         };
 
+        closeMenuAnimation.Completed += (o, args) =>
+        {
+            _isMenuOpen = false;
+        };
         Menu.BeginAnimation(FrameworkElement.MarginProperty, closeMenuAnimation);
-        _isMenuOpen = false;
     }
 
     private void OpenMenu_MouseEnter(object sender, MouseEventArgs e)
@@ -39,7 +42,7 @@ public partial class WinStartMain
         if (_isMenuOpen)
             return;
         
-        var closeMenuAnimation = new ThicknessAnimation
+        var openMenuAnimation = new ThicknessAnimation
         {
             Duration = new Duration(TimeSpan.FromMilliseconds(200)),
             To = new Thickness(0, 0, 0, 0),
@@ -47,8 +50,11 @@ public partial class WinStartMain
             EasingFunction = new CubicEase { EasingMode = EasingMode.EaseIn }
         };
 
-        Menu.BeginAnimation(FrameworkElement.MarginProperty, closeMenuAnimation);
+        openMenuAnimation.Completed += (o, args) =>
+        {
+            _isMenuOpen = true;
+        };
+        Menu.BeginAnimation(FrameworkElement.MarginProperty, openMenuAnimation);
         
-        _isMenuOpen = true;
     }
 }
