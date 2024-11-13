@@ -13,11 +13,17 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         
-        <Grid x:Name="Menu" Background="White" MouseLeave="CloseMenu_MouseLeave" Margin="-180 0 10 0"
+        <Grid x:Name="MenuBox" Background="White" MouseLeave="CloseMenu_MouseLeave" Margin="-200 0 10 0"
               Width="200" HorizontalAlignment="Left">
             <StackPanel>
                 <TextBlock>Меню</TextBlock>
-                <Button Click="ButtonBase_OnClick" Style="{StaticResource Button}">Домашняя страница</Button>
+                <TreeView SelectedItemChanged="MenuItemSelected_ItemSelectedChanged" x:Name="MenuView">
+                    <TreeView.ItemTemplate>
+                        <DataTemplate DataType="{x:Type local:IPageMenuItem}">
+                            <TextBlock Text="{Binding Title}"/>
+                        </DataTemplate>
+                    </TreeView.ItemTemplate>
+                </TreeView>
             </StackPanel>
         </Grid>
         

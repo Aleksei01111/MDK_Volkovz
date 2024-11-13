@@ -1,4 +1,5 @@
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media.Animation;
 
@@ -6,6 +7,8 @@ namespace MDK_Volkov.Practice_4;
 
 public partial class WinStartMain
 {
+    private List<PageMenuItem> _menuItems = new();
+    
     private readonly ThicknessAnimation _menuAnimation = new()
     {
         Duration = TimeSpan.FromMilliseconds(200),
@@ -20,13 +23,11 @@ public partial class WinStartMain
     {
         InitializeComponent();
         
-        _closedMenuThickness = Menu.Margin;
-        _openedMenuThickness = new Thickness(0, Menu.Margin.Top, Menu.Margin.Right, Menu.Margin.Bottom);
-    }
-
-    private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
-    {
-        MainFrame.Navigate(new PageStartMenu());
+        _menuItems.Add(new PageMenuItem("Главная", new PageStartMenu()));
+        MenuView.ItemsSource = _menuItems;
+        
+        _closedMenuThickness = MenuBox.Margin;
+        _openedMenuThickness = new Thickness(0, MenuBox.Margin.Top, MenuBox.Margin.Right, MenuBox.Margin.Bottom);
     }
 
     private void CloseMenu_MouseLeave(object sender, MouseEventArgs e)
@@ -36,7 +37,7 @@ public partial class WinStartMain
         
         _menuAnimation.From = _openedMenuThickness;
         _menuAnimation.To = _closedMenuThickness;
-        Menu.BeginAnimation(FrameworkElement.MarginProperty, _menuAnimation);
+        MenuBox.BeginAnimation(FrameworkElement.MarginProperty, _menuAnimation);
         
         _isMenuOpen = false;
     }
@@ -48,8 +49,13 @@ public partial class WinStartMain
         
         _menuAnimation.From = _closedMenuThickness;
         _menuAnimation.To = _openedMenuThickness;
-        Menu.BeginAnimation(FrameworkElement.MarginProperty, _menuAnimation);
+        MenuBox.BeginAnimation(FrameworkElement.MarginProperty, _menuAnimation);
         
         _isMenuOpen = true;
+    }
+
+    private void MenuItemSelected_ItemSelectedChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+    {
+        MainFrame.Navigate((e.NewValue as PageMenuItem).Page);
     }
 }
