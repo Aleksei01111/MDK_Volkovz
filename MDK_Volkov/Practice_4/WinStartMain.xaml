@@ -9,16 +9,19 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-
-        <Grid x:Name="Menu" Background="White" MouseLeave="CloseMenu_MouseLeave" Margin="-180 0 0 0" MouseEnter="OpenMenu_MouseEnter" Width="200" HorizontalAlignment="Left">
+        
+        <Grid x:Name="Menu" Background="White" MouseLeave="CloseMenu_MouseLeave" Margin="-180 0 0 0" Width="200" HorizontalAlignment="Left">
             <StackPanel>
                 <TextBlock>Меню</TextBlock>
                 <Button Click="ButtonBase_OnClick">Домашняя страница</Button>
             </StackPanel>
         </Grid>
         
-        <Frame NavigationUIVisibility="Hidden" Grid.Column="1" x:Name="MainFrame"/>
+        <Button Grid.Column="1" Style="{StaticResource Button}" Click="OpenMenu_OnClick" MaxWidth="100" VerticalAlignment="Top" Margin="0 10">Меню</Button>
+        
+        <Frame NavigationUIVisibility="Hidden" Grid.Column="2" x:Name="MainFrame"/>
     </Grid>
 </Window>

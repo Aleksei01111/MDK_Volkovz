@@ -6,7 +6,16 @@ namespace MDK_Volkov.Practice_4;
 
 public partial class WinStartMain
 {
-    private bool _isMenuOpen;
+    private ThicknessAnimation _menuAnimation = new ThicknessAnimation
+    {
+        Duration = TimeSpan.FromMilliseconds(200),
+        EasingFunction = new QuadraticEase() { EasingMode = EasingMode.EaseInOut }
+    };
+    private Thickness _openedMenuThickness = new Thickness(0, 0, 0, 0);
+    private Thickness _closedMenuThickness = new Thickness(-180, 0, 0, 0);
+    
+    private bool _isMenuOpen = false;
+    
     public WinStartMain()
     {
         InitializeComponent();
@@ -22,39 +31,22 @@ public partial class WinStartMain
         if (!_isMenuOpen)
             return;
         
-        var closeMenuAnimation = new ThicknessAnimation
-        {
-            Duration = new Duration(TimeSpan.FromMilliseconds(500)),
-            To = new Thickness(-180, 0, 0, 0),
-            From = new Thickness(0, 0, 0, 0),
-            EasingFunction = new CubicEase { EasingMode = EasingMode.EaseInOut }
-        };
-
-        closeMenuAnimation.Completed += (o, args) =>
-        {
-            _isMenuOpen = false;
-        };
-        Menu.BeginAnimation(FrameworkElement.MarginProperty, closeMenuAnimation);
+        _menuAnimation.From = _openedMenuThickness;
+        _menuAnimation.To = _closedMenuThickness;
+        Menu.BeginAnimation(FrameworkElement.MarginProperty, _menuAnimation);
+        
+        _isMenuOpen = false;
     }
 
-    private void OpenMenu_MouseEnter(object sender, MouseEventArgs e)
+    private void OpenMenu_OnClick(object sender, RoutedEventArgs e)
     {
         if (_isMenuOpen)
             return;
         
-        var openMenuAnimation = new ThicknessAnimation
-        {
-            Duration = new Duration(TimeSpan.FromMilliseconds(200)),
-            To = new Thickness(0, 0, 0, 0),
-            From = new Thickness(-180, 0, 0, 0),
-            EasingFunction = new CubicEase { EasingMode = EasingMode.EaseIn }
-        };
-
-        openMenuAnimation.Completed += (o, args) =>
-        {
-            _isMenuOpen = true;
-        };
-        Menu.BeginAnimation(FrameworkElement.MarginProperty, openMenuAnimation);
+        _menuAnimation.From = _closedMenuThickness;
+        _menuAnimation.To = _openedMenuThickness;
+        Menu.BeginAnimation(FrameworkElement.MarginProperty, _menuAnimation);
         
+        _isMenuOpen = true;
     }
 }
