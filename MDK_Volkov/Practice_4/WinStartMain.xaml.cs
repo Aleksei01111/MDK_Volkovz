@@ -6,19 +6,22 @@ namespace MDK_Volkov.Practice_4;
 
 public partial class WinStartMain
 {
-    private ThicknessAnimation _menuAnimation = new ThicknessAnimation
+    private readonly ThicknessAnimation _menuAnimation = new()
     {
         Duration = TimeSpan.FromMilliseconds(200),
-        EasingFunction = new QuadraticEase() { EasingMode = EasingMode.EaseInOut }
+        EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut }
     };
-    private Thickness _openedMenuThickness = new Thickness(0, 0, 0, 0);
-    private Thickness _closedMenuThickness = new Thickness(-180, 0, 0, 0);
+    private readonly Thickness _openedMenuThickness;
+    private readonly Thickness _closedMenuThickness;
     
-    private bool _isMenuOpen = false;
+    private bool _isMenuOpen;
     
     public WinStartMain()
     {
         InitializeComponent();
+        
+        _closedMenuThickness = Menu.Margin;
+        _openedMenuThickness = new Thickness(0, Menu.Margin.Top, Menu.Margin.Right, Menu.Margin.Bottom);
     }
 
     private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
