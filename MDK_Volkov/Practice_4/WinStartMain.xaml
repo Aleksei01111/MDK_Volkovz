@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:MDK_Volkov.Practice_4"
         mc:Ignorable="d"
         Title="WinStartMain" Height="750" Width="1000">
+    <Window.DataContext>
+        <local:MenuContext/>
+    </Window.DataContext>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -17,9 +20,9 @@
               Width="200" HorizontalAlignment="Left">
             <StackPanel>
                 <TextBlock>Меню</TextBlock>
-                <TreeView SelectedItemChanged="MenuItemSelected_ItemSelectedChanged" x:Name="MenuView">
+                <TreeView ItemsSource="{Binding MenuItems}" SelectedItemChanged="MenuItemSelected_ItemSelectedChanged" x:Name="MenuView">
                     <TreeView.ItemTemplate>
-                        <DataTemplate DataType="{x:Type local:IPageMenuItem}">
+                        <DataTemplate>
                             <TextBlock Text="{Binding Title}"/>
                         </DataTemplate>
                     </TreeView.ItemTemplate>
@@ -30,6 +33,14 @@
         <Button Grid.Column="1" Style="{StaticResource Button}" Click="OpenMenu_OnClick"
                 MaxWidth="100" VerticalAlignment="Top" Margin="0 10">Меню</Button>
         
-        <Frame NavigationUIVisibility="Hidden" Grid.Column="2" x:Name="MainFrame"/>
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <TextBlock Style="{StaticResource Head1}" HorizontalAlignment="Center" Text="{Binding SelectedItem.Title}"/>
+            <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Content="{Binding SelectedItem.Page}"/>
+        </Grid>
     </Grid>
 </Window>
