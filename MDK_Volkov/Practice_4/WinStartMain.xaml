@@ -40,7 +40,7 @@
             </Grid.RowDefinitions>
             
             <TextBlock Style="{StaticResource Head1}" HorizontalAlignment="Center" Text="{Binding SelectedItem.Title}"/>
-            <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Content="{Binding SelectedItem.Page}"/>
+            <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Content="{Binding SelectedItem}"/>
         </Grid>
     </Grid>
 </Window>

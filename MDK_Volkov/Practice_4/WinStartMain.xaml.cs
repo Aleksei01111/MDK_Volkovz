@@ -7,7 +7,7 @@ namespace MDK_Volkov.Practice_4;
 
 public partial class WinStartMain
 {
-    private List<IPageMenuItem> _menuItems = new();
+    private List<Page> _menuItems = new();
     
     private readonly ThicknessAnimation _menuAnimation = new()
     {
@@ -23,7 +23,7 @@ public partial class WinStartMain
     {
         InitializeComponent();
         
-        _menuItems.Add(new PageMenuItem("Главная", new PageStartMenu()));
+        _menuItems.Add(new PageStartMenu());
         DataContext = new MenuContext {MenuItems = _menuItems};
         
         _closedMenuThickness = MenuBox.Margin;
@@ -56,7 +56,7 @@ public partial class WinStartMain
 
     private void MenuItemSelected_ItemSelectedChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
     {
-        (DataContext as MenuContext).SelectedItem = (IPageMenuItem)e.NewValue;
+        (DataContext as MenuContext).SelectedItem = (Page)e.NewValue;
         var a = (DataContext as MenuContext).SelectedItem;
     }
 }
