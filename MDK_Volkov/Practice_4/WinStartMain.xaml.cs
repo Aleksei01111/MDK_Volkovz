@@ -2,6 +2,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media.Animation;
+using MDK_Volkov.Practice_4.MenuPages;
 
 namespace MDK_Volkov.Practice_4;
 
@@ -24,6 +25,7 @@ public partial class WinStartMain
         InitializeComponent();
         
         _menuItems.Add(new PageStartMenu());
+        _menuItems.Add(new Page2());
         DataContext = new MenuContext {MenuItems = _menuItems};
         
         _closedMenuThickness = MenuBox.Margin;
@@ -52,11 +54,5 @@ public partial class WinStartMain
         MenuBox.BeginAnimation(FrameworkElement.MarginProperty, _menuAnimation);
         
         _isMenuOpen = true;
-    }
-
-    private void MenuItemSelected_ItemSelectedChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
-    {
-        (DataContext as MenuContext).SelectedItem = (Page)e.NewValue;
-        var a = (DataContext as MenuContext).SelectedItem;
     }
 }

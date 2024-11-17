@@ -16,17 +16,18 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         
-        <Grid x:Name="MenuBox" Background="White" MouseLeave="CloseMenu_MouseLeave" Margin="-200 0 10 0"
+        <!-- Меню -->
+        <Grid x:Name="MenuBox" Background="{StaticResource WhiteColor}" MouseLeave="CloseMenu_MouseLeave" Margin="-200 0 10 0"
               Width="200" HorizontalAlignment="Left">
             <StackPanel>
-                <TextBlock>Меню</TextBlock>
-                <TreeView ItemsSource="{Binding MenuItems}" SelectedItemChanged="MenuItemSelected_ItemSelectedChanged" x:Name="MenuView">
-                    <TreeView.ItemTemplate>
+                <TextBlock Style="{StaticResource Head2}" Margin="0 0 0 10">Меню</TextBlock>
+                <ListBox Style="{StaticResource ListBox}" ItemsSource="{Binding MenuItems}" SelectedItem="{Binding SelectedItem}">
+                    <ListBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Title}"/>
                         </DataTemplate>
-                    </TreeView.ItemTemplate>
-                </TreeView>
+                    </ListBox.ItemTemplate>
+                </ListBox>
             </StackPanel>
         </Grid>
         

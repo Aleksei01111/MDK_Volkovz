@@ -153,4 +153,15 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
+    <Style x:Key="ListBox" TargetType="ListBox">
+        <Setter Property="FontFamily" Value="{StaticResource GlobalFontFamily}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBox">
+                    <ItemsPresenter/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
