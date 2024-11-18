@@ -17,11 +17,13 @@
         </Grid.ColumnDefinitions>
         
         <!-- Меню -->
-        <Grid x:Name="MenuBox" Background="{StaticResource WhiteColor}" MouseLeave="CloseMenu_MouseLeave" Margin="-200 0 10 0"
+        <Grid x:Name="MenuBox" Background="{StaticResource WhiteColor}"
+              MouseLeave="CloseMenu_MouseLeave" Margin="-200 0 10 0"
               Width="200" HorizontalAlignment="Left">
             <StackPanel>
                 <TextBlock Style="{StaticResource Head2}" Margin="0 0 0 10">Меню</TextBlock>
-                <ListBox Style="{StaticResource ListBox}" ItemsSource="{Binding MenuItems}" SelectedItem="{Binding SelectedItem}">
+                <ListBox Style="{StaticResource ListBox}" ItemsSource="{Binding MenuItems}"
+                         SelectedItem="{Binding SelectedItem}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Title}"/>
@@ -40,7 +42,8 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             
-            <TextBlock Style="{StaticResource Head1}" HorizontalAlignment="Center" Text="{Binding SelectedItem.Title}"/>
+            <TextBlock Style="{StaticResource Head1}"
+                       HorizontalAlignment="Center" Text="{Binding SelectedItem.Title}"/>
             <Frame Grid.Row="1" NavigationUIVisibility="Hidden" Content="{Binding SelectedItem}"/>
         </Grid>
     </Grid>

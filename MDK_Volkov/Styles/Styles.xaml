@@ -6,7 +6,7 @@
     <SolidColorBrush x:Key="SecondaryColor" Color="#5bc2a3"/>
     <SolidColorBrush x:Key="Color3" Color="#D897AC"/>
     <SolidColorBrush x:Key="WhiteColor" Color="#e9edec"/>
-    <CornerRadius x:Key="GlobalCornerRadius" TopLeft="6" TopRight="6" BottomRight="6" BottomLeft="6"/>
+    <CornerRadius x:Key="GlobalCornerRadius" TopLeft="2" TopRight="2" BottomRight="2" BottomLeft="2"/>
 
     <Style x:Key="Head1">
         <Setter Property="TextBlock.FontFamily" Value="{StaticResource GlobalFontFamily}"/>
