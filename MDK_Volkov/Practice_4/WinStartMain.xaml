@@ -16,10 +16,15 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
         <!-- Меню -->
         <Grid x:Name="MenuBox" Background="{StaticResource WhiteColor}"
               MouseLeave="CloseMenu_MouseLeave" Margin="-200 0 10 0"
-              Width="200" HorizontalAlignment="Left">
+              Width="200" HorizontalAlignment="Left" Grid.RowSpan="3">
             <StackPanel>
                 <TextBlock Style="{StaticResource Head2}" Margin="0 0 0 10">Меню</TextBlock>
                 <ListBox Style="{StaticResource ListBox}" ItemsSource="{Binding MenuItems}"
@@ -33,10 +38,10 @@
             </StackPanel>
         </Grid>
         
-        <Button Grid.Column="1" Style="{StaticResource Button}" Click="OpenMenu_OnClick"
+        <Button Grid.Row="0" Grid.Column="1" Style="{StaticResource Button}" Click="OpenMenu_OnClick"
                 MaxWidth="100" VerticalAlignment="Top" Margin="0 10">Меню</Button>
         
-        <Grid Grid.Column="2">
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.2*"/>
                 <RowDefinition/>
