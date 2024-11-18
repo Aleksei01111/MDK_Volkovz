@@ -156,11 +156,29 @@
     
     <Style x:Key="ListBox" TargetType="ListBox">
         <Setter Property="FontFamily" Value="{StaticResource GlobalFontFamily}"/>
-        <Setter Property="Template">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Padding" Value="0 5 0 5"/>
+        <Setter Property="ItemContainerStyle">
             <Setter.Value>
-                <ControlTemplate TargetType="ListBox">
-                    <ItemsPresenter/>
-                </ControlTemplate>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Foreground" Value="{StaticResource PrimaryColor}"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <Border x:Name="Border" Padding="0 10 0 10" Background="{StaticResource WhiteColor}">
+                                    <ContentPresenter HorizontalAlignment="Center"/>
+                                </Border>
+                                
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="Border" Property="Background" Value="{StaticResource PrimaryColor}"/>
+                                        <Setter Property="Foreground" Value="{StaticResource WhiteColor}"/>
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
             </Setter.Value>
         </Setter>
     </Style>
